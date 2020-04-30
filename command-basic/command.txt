@@ -1,0 +1,19 @@
+Docker
+Docker image: xem hướng dẫn docker image
++ docker images: kiểm tra image trong máy
++ docker history mongo:  Kiểm tra lịch sử image đó
++ docker inspect mongo: Hiển thị thông tin chi tiết về image mongo
++ docker image ls/docker images: hiển thị các image đang có trong máy
+DOCKER HUB
++ docker pull hello-world: pull image
++ docker run hello-world: chạy image
++ docker pull node:13.13-alpine3.10: nếu pull bản cụ thể mà không muốn dùng bản lastest
++ docker run -it node:13.13-alpine3.10 sh: truy cập vô sh, start lên
+	++ node -v: kiểm tra version
+	++ node: chạy node
+	++ exit
++ docker image rm hello-world (hoặc id)/ docker rmi id: xoá image (kiểm tra docker image ls)
+docker container
+Trước khi remove phải xoá bỏ container đang hoạt động đó
++ Docker ps -a: kiểm tra container đang hoạt động
++ docker rm id id/ docker container rm id id: xoá container id
