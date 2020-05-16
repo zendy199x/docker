@@ -17,3 +17,19 @@ docker container
 Trước khi remove phải xoá bỏ container đang hoạt động đó
 + Docker ps -a: kiểm tra container đang hoạt động
 + docker rm id id/ docker container rm id id: xoá container id
+
+
+Option khi run 1 image để tạo các container
++ docker run --help
++ docker run mongo: Hiển thị log của container mongo
++ docker run -d mongo: Hiển thị giá trị id của container được sinh ra
++ docker ps: Hiển thị các container đang warning
++ docker run -it: Tương tác với container được sinh ra
++ docker run -p 27017:27017 mongo: Connect port của máy host với post của container
++ docker run -v ${pwd}/data:/data/db mongo: folder mouting của máy host với folder mouting của container, data của container sẽ được mapping ra bên ngoài của máy host giúp duy trì dữ liệu bên trong container
++ docker image inspect mongg: sử dụng ExposePorts để sử dụng option -d
++ docker run -e USER=ZENDY zendy/hello_user: Truyền các biến môi trường vào bên trong container
++ docker -e: USER=ZENDY:
++ docker exec -it id sh: truy cập vào bên trong sh của container
++ docker logs id: Kiểm tra log
++ docker logs id -f: Hiển thị toàn bộ log
